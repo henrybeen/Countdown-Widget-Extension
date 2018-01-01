@@ -1,55 +1,12 @@
 {
-  "name": "countdown-widget",
+  "name": "countdownwidget",
   "version": "1.0.0",
-  "description": "Microsoft DevLabs Countdown widget extension",
-  "keywords": [
-    "vsts",
-    "tfs"
-  ],
-  "scripts": {
-    "build": "npm run lint && npm run clean && npm run webpack",
-    "clean": "rimraf ./dist && rimraf ./*.vsix",
-    "gallery-publish": "npm run build && tfx extension publish --rev-version --token mi244imrtmzyhxtiych23wf2e6titzfffbdhm25my5p3bob6el4q",
-    "lint": "tslint -c tslint.json 'src/*.ts'",
-    "package": "tfx extension create  --rev-version",
-    "postbuilddemo": "npm run package",
-    "webpack": "webpack --progress --colors --config webpack.config.js --output-path ./dist -p",
-    "compiletests": "tsc ./tests/CountdownCalculatorSpec.ts",
-    "runtests": "jasmine-node --test-dir ./tests --verbose --junitreport --output ./reportTests/",
-    "runcovertests": "istanbul cover --hook-run-in-context --report cobertura --report html node_modules/jasmine-node/bin/jasmine-node --test-dir ./tests --verbose --junitreport --output ./reportTests/",
-    "inlinesource": "gulp inlinesource",
-    "pretest": "rimraf ./reportTests && rimraf ./coverage",
-    "test": "npm run compiletests && npm run runtests && npm run runcovertests",
-    "posttest": "npm run inlinesource"
-  },
-  "author": "ALM Rangers",
-  "license": "MIT",
-  "devDependencies": {
-    "cpx": "^1.5.0",
-    "rimraf": "^2.6.1",
-    "tfx-cli": "^0.4.5",
-    "ts-loader": "^2.0.0",
-    "tslint": "^5.2.0",
-    "tslint-loader": "^3.5.3",
-    "typescript": "2.3.2",
-    "webpack": "^2.5.1",
-    "jasmine-node": "^1.14.5",
-    "istanbul": "^0.4.5",
-    "gulp": "^3.9.1",
-    "gulp-inline-source": "^3.1.0"
-  },
   "dependencies": {
-    "@types/jquery": "^2.0.34",
-    "@types/q": "0.0.32",
-    "@types/jasmine": "^2.5.53",
-    "applicationinsights-js": "^1.0.9",
-    "jasmine": "^2.4.1",
-    "jquery": "^3.1.0",
-    "moment": "^2.14.1",
-    "moment-timezone": "^0.5.4",
-    "requirejs": "^2.2.0",
+    "jquery": "^3.2.1",
+    "moment": "^2.20.1",
+    "moment-timezone": "^0.5.14",
     "spectrum-colorpicker": "^1.8.0",
-    "telemetryclient-team-services-extension": "*",
-    "vss-web-extension-sdk": "^2.116.1"
+    "timecircles": "^1.5.3",
+    "vss-web-extension-sdk": "^5.127.0"
   }
 }

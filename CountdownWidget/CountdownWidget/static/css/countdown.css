@@ -1,0 +1,31 @@
+.container {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
+.config-label {
+    margin-right: 25px;
+}
+
+.countdown-config-group {
+	margin-bottom: 15px;
+	width: 100%;
+}
+
+.inputwrapper {
+	clear: right;
+	float: right;
+}
+
+.timezonepicker {
+	width: 200px;
+}
+
+.widthpicker {
+	width: 100px;
+}
+
+#timezonepicker-container {
+	height: 30px;
+}

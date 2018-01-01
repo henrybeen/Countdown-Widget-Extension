@@ -1,0 +1,75 @@
+ <!DOCTYPE html>
+	<html xmlns="http://www.w3.org/1999/xhtml">
+		<head>                          
+			<script src="../lib/VSS.SDK.min.js"></script>
+			<script src="../lib/moment.min.js"></script>
+			<script src="../lib/moment-timezone.min.js"></script>
+			<script src="../lib/jquery.min.js"></script>
+			<script src="../lib/spectrum.js"></script>
+
+			<link rel="stylesheet" type="text/css" href="../css/countdown.css">
+			<link rel="stylesheet" type="text/css" href="../css/spectrum.css">
+		</head>
+		<body;">
+			<div class="container">
+				<div class="countdown-config-group" id="countdown-type-picker">
+					<input class="field" type="radio" checked name="countdownType" value="toEndOfSprint" id="toEndOfSprint">
+					<label class="config-label countdown-config-label" for="toEndOfSprint">Count down to the end of the current sprint</label>
+					<br>
+					<input class="field" type="radio" name="countdownType" value="toCustomDateTime" id="toCustomDateTime">
+					<label class="config-label countdown-config-label" for="toCustomDateTime">Count down to a custom date and time</label>
+				</div>
+				<div class="countdown-config-group" id="datepicker-container">
+					<label class="config-label countdown-config-label" for="datetimepicker">End date:</label>
+					<div id="datetime" class="datetimepicker"></div>
+				</div>
+				<div class="countdown-config-label" id="timezonepicker-container">
+					<label class="config-label countdown-config-label">Timezone:</label>
+					<div class="inputwrapper">
+						<select id="timezone" class="timezonepicker"></select>
+					</div>
+				</div>
+				<div class="countdown-config-group">
+					<label class="config-label" for="fgWidth">Foreground width:</label>
+					<div class="inputwrapper">
+						<div id="fgWidth" class="widthpicker"></div>
+					</div>
+				</div>
+				<div class="countdown-config-group">
+					<label class="config-label" for="bgWidth">Background width:</label>
+					<div class="inputwrapper">
+						<div id="bgWidth" class="widthpicker"></div>
+					</div>
+				</div>
+				<div class="countdown-config-group">
+					<label class="config-label">Days color:</label>
+					<div class="inputwrapper">
+						<input id="days-colorpicker" class="colorpicker-input">
+					</div>
+				</div>
+				<div class="countdown-config-group">
+					<label class="config-label">Hours color:</label>
+					<div class="inputwrapper">
+						<input id="hours-colorpicker" class="colorpicker-input">
+					</div>
+				</div>
+				<div class="countdown-config-group">
+					<label class="config-label">Minutes color:</label>
+					<div class="inputwrapper">
+						<input id="minutes-colorpicker" class="colorpicker-input">
+					</div>
+				</div>
+				<div class="countdown-config-group">
+					<label class="config-label">Seconds color:</label>
+					<div class="inputwrapper">
+						<input id="seconds-colorpicker" class="colorpicker-input">
+					</div>
+				</div>
+				<div style="height: 125px;">
+					&nbsp;					
+				</div>
+			</div>
+
+			<script src="../js/configuration.js"></script>
+		</body>
+	</html>
